@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $footer-background;
+    padding: 20px 25px;
+    gap: 16px;
+    color: $text_color;
+    &_logo {
+        font-family: $secondary-font;
+        font-size: 18px;
+        margin: 0;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        gap: 7px;
+        margin: 0px;
+        &_item {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            & i {
+                width: 11.918px;
+                height: 13px;
+            }
+        }
+    }
+    
+}
