@@ -1,0 +1,36 @@
+.restaurant_list {
+    border: 3px solid indigo;
+    display: flex;
+    flex-direction: column;
+    background-color: $location-color;
+    padding: 20px;
+    &_title {
+        border: 3px solid green;
+    }
+    &_card_container {
+        border: 3px solid red;
+        display: flex;
+        flex-direction: column;
+        & a {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+    }
+    &_content{
+        background-color: white;
+        border-radius: 15px;
+        & img {
+            width: 100%;
+            height: 231px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        &_text{
+            border: 3px solid blueviolet;
+        }
+    }
+
+    
+}
