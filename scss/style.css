@@ -15,6 +15,11 @@ li p {
   margin: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -72,6 +77,67 @@ li p {
 }
 .button_content .button_text {
   font-size: 16px;
+}
+
+.functioning {
+  border: 3px solid salmon;
+  display: flex;
+  flex-direction: column;
+}
+.functioning_title {
+  padding: 0px 20px;
+  border: 2px solid green;
+}
+.functioning_button {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.functioning_button_bloc {
+  border: 3px solid blueviolet;
+  display: flex;
+  justify-content: center;
+  width: 322px;
+  margin: auto;
+  height: 72px;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.restaurant_list {
+  border: 3px solid indigo;
+  display: flex;
+  flex-direction: column;
+  background-color: #EAEAEA;
+  padding: 20px;
+}
+.restaurant_list_title {
+  border: 3px solid green;
+}
+.restaurant_list_card_container {
+  border: 3px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.restaurant_list_card_container a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.restaurant_list_content {
+  background-color: white;
+  border-radius: 15px;
+}
+.restaurant_list_content img {
+  width: 100%;
+  height: 231px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.restaurant_list_content_text {
+  border: 3px solid blueviolet;
 }
 
 .footer {
