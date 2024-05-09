@@ -1,36 +1,73 @@
 .restaurant_list {
-    border: 3px solid indigo;
+    // border: 3px solid indigo;
     display: flex;
     flex-direction: column;
     background-color: $location-color;
     padding: 20px;
+    &_card {
+        // border: 3px solid black;
+        display: flex;
+        justify-content:flex-end;
+        padding: 10px;
+
+    }
     &_title {
-        border: 3px solid green;
+        // border: 3px solid green;
+        font-size: 24px;
     }
     &_card_container {
-        border: 3px solid red;
-        display: flex;
-        flex-direction: column;
+        // border: 3px solid red;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 18px;
         & a {
             display: flex;
             flex-direction: column;
             gap: 20px;
-
         }
     }
     &_content{
         background-color: white;
         border-radius: 15px;
+        // border: 3px solid salmon;
         & img {
             width: 100%;
             height: 231px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 15px 15px 0px 0px;
         }
+        
         &_text{
-            border: 3px solid blueviolet;
+            // border: 3px solid blueviolet;
+            display: flex;
+            flex-direction: column;
+            margin-right: auto;
+            
+            & h3, 
+            p {
+                margin: 0px;
+            }
+        }
+        &_title {
+            // border: 3px solid gold;
+            font-size: 18px;
+        }
+        &_city {
+            // border: 3px solid red;
+            font-size: 17px;
+            font-style: normal;
+        }
+        &_like {
+            // border: 3px solid green;
+            font-size: 21px;
+            display: flex;
+            align-items: center;
+            .fa-solid {
+                color: $primary-color;
+            }
         }
     }
 
-    
 }
