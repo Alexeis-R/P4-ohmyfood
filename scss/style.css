@@ -52,7 +52,7 @@ a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   background-color: #F6F6F6;
 }
 .info_title {
@@ -74,51 +74,58 @@ a {
   height: 50px;
   border: none;
   color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .button_content .button_text {
   font-size: 16px;
 }
 
 .functioning {
-  border: 3px solid salmon;
   display: flex;
   flex-direction: column;
+  margin-bottom: 70px;
+  margin-top: 20px;
 }
 .functioning_title {
   padding: 0px 20px;
-  border: 2px solid green;
 }
 .functioning_button {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .functioning_button_bloc {
-  border: 3px solid blueviolet;
+  border: none;
   display: flex;
   justify-content: center;
-  width: 322px;
+  width: 100%;
   margin: auto;
   height: 72px;
   align-items: center;
   border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 .restaurant_list {
-  border: 3px solid indigo;
   display: flex;
   flex-direction: column;
   background-color: #EAEAEA;
   padding: 20px;
 }
+.restaurant_list_card {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
 .restaurant_list_title {
-  border: 3px solid green;
+  font-size: 24px;
 }
 .restaurant_list_card_container {
-  border: 3px solid red;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 18px;
 }
 .restaurant_list_card_container a {
   display: flex;
@@ -134,10 +141,31 @@ a {
   height: 231px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
 }
 .restaurant_list_content_text {
-  border: 3px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.restaurant_list_content_text h3,
+.restaurant_list_content_text p {
+  margin: 0px;
+}
+.restaurant_list_content_title {
+  font-size: 18px;
+}
+.restaurant_list_content_city {
+  font-size: 17px;
+  font-style: normal;
+}
+.restaurant_list_content_like {
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+}
+.restaurant_list_content_like .fa-solid {
+  color: #9356DC;
 }
 
 .footer {
