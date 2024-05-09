@@ -1,25 +1,29 @@
 .functioning {
-    border: 3px solid salmon;
+    // border: 3px solid salmon;
     display: flex;
     flex-direction: column;
+    margin-bottom: 70px;
+    margin-top: 20px;
     &_title{
         padding: 0px 20px;
-        border: 2px solid green;
+        // border: 2px solid green;
     }
     &_button{
-        border: 2px solid red;
+        // border: 2px solid red;
         display: flex;
         flex-direction: column;
         gap: 20px;
         &_bloc{
-            border: 3px solid blueviolet;
+            // border: 3px solid blueviolet;
+            border: none;
             display: flex;
             justify-content: center;
-            width: 322px;
+            width: 100%;
             margin: auto;
             height: 72px;
             align-items: center;
             border-radius: 20px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
         }
     }
 
