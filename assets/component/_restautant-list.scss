@@ -71,3 +71,25 @@
     }
 
 }
+////**** Media Query ****///
+
+@media only screen and (min-width : 1440px) {
+    .restaurant_list {
+        // border: 2px solid gold;
+        padding: 0px 180px 30px 180px;
+        gap: 28px;
+        align-items: flex-start;
+        &_card_container {
+            // border: 3px solid black;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 100px;
+            grid-row-gap: 50px;
+            width: 100%;
+        }
+    }
+
+
+
+}

@@ -28,3 +28,27 @@
     }
     
 }
+
+@media only screen and (min-width : 1440px) {
+    .footer {
+        padding: 30px 25px;
+
+        &_container {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: row-reverse;
+            gap: 50px;
+        }
+        &_list {
+            display: flex;
+            flex-direction: row;
+            padding: 0px;
+            gap: 25px;
+            margin: 0px;
+        }
+    }
+    
+
+    
+
+}
