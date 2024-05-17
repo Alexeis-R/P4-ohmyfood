@@ -5,7 +5,6 @@
 body {
   margin: 0px;
   box-sizing: border-box;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -13,8 +12,14 @@ li {
   list-style: none;
 }
 
-li p {
+h1,
+h3,
+h4 {
   margin: 0px;
+}
+
+li p {
+  margin: 0;
 }
 
 a {
@@ -32,6 +37,104 @@ a {
   font-family: "Shrikhand";
   padding: 0px 19px 0px 16px;
   margin: 0px;
+}
+
+.header_menu {
+  box-sizing: border-box;
+  width: 375px;
+}
+
+.header_container {
+  display: flex;
+  padding: 14px 89px 13px 17px;
+  align-items: center;
+  gap: 42px;
+  width: 100%;
+  height: 36px;
+}
+.header_container h1 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.menu {
+  width: auto;
+}
+.menu img {
+  width: 100%;
+}
+.menu_list {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 17px 0px;
+  border-radius: 15px;
+  gap: 40px;
+  background-color: #F6F6F6;
+}
+.menu_list_title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.menu_list_title h3 {
+  margin: 0px;
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-weight: 400;
+  font-style: normal;
+}
+.menu_list_title i {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  padding-right: 24px;
+}
+.menu_entree {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu_entree h3 {
+  margin: 0px;
+}
+.menu_entree_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.menu_entree_buttons_button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+}
+.menu_entree_buttons_title {
+  display: flex;
+}
+.menu_entree_buttons_title h4 {
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+}
+.menu_entree_buttons_price {
+  display: flex;
+  justify-content: space-between;
+}
+.menu_entree_buttons_price span {
+  font-size: 15.043px;
+  font-weight: 700;
+  font-style: normal;
+}
+.menu_entree_buttons_price p {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .location {
