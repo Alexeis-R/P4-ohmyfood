@@ -1,0 +1,91 @@
+
+.menu {
+    width: auto;
+    & img {
+        width: 100%;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 17px 0px;
+        border-radius: 15px;
+        gap: 40px;
+        background-color: $menu-color;
+        &_title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            & h3 {
+                margin: 0px;
+                font-family: "Shrikhand";
+                font-size: 28px;
+                font-weight: 400;
+                font-style: normal;
+            }
+            & i {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                padding-right: 24px;
+            }
+        }
+    }
+    &_entree {
+        // border: 2px solid blue;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        & h3 {
+            margin: 0px;
+        }
+        &_buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            &_button {
+                width: 100%;
+                padding: 15px;
+                border: none;
+                border-radius: 15px;
+                background-color: white;
+                box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+            }
+            &_title {
+                display: flex;
+                h4 {
+                    font-size: 18px;
+                    font-weight: 500;
+                    font-style: normal;
+                }
+            }
+            &_price {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font-size: 15.043px;
+                    font-weight: 700;
+                    font-style: normal;
+                }
+                p {
+                    margin: 0px;
+                    font-size: 15px;
+                    font-weight: 300;
+                    font-style: normal;
+                }
+            }
+            
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
