@@ -1,11 +1,10 @@
 * {
   font-family: "Roboto";
+  box-sizing: border-box;
 }
 
 body {
   margin: 0px;
-  box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 li {
@@ -40,8 +39,9 @@ a {
 }
 
 .header_menu {
+  display: flex;
   box-sizing: border-box;
-  width: 375px;
+  width: 100%;
 }
 
 .header_container {
@@ -50,7 +50,6 @@ a {
   align-items: center;
   gap: 42px;
   width: 100%;
-  height: 36px;
 }
 .header_container h1 {
   font-size: 30px;
@@ -58,24 +57,36 @@ a {
   line-height: normal;
 }
 
+@media only screen and (min-width: 1440px) {
+  .header_container {
+    gap: 600px;
+  }
+}
 .menu {
   width: auto;
+  display: flex;
+  flex-direction: column;
 }
 .menu img {
   width: 100%;
+  height: 275px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .menu_list {
   display: flex;
   flex-direction: column;
-  padding: 32px 17px 0px;
-  border-radius: 15px;
+  border-radius: 50px 50px 0px 0px;
   gap: 40px;
   background-color: #F6F6F6;
+  z-index: 2;
+  margin-top: -50px;
 }
 .menu_list_title {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  padding: 32px 17px 0px;
 }
 .menu_list_title h3 {
   margin: 0px;
@@ -95,6 +106,11 @@ a {
   align-items: flex-start;
   flex-direction: column;
   gap: 12px;
+  padding: 0px 17px 0px;
+}
+.menu_entree_title {
+  border-bottom: 3px solid #99E2D0;
+  width: 47px;
 }
 .menu_entree h3 {
   margin: 0px;
@@ -137,6 +153,33 @@ a {
   font-style: normal;
 }
 
+@media only screen and (min-width: 1440px) {
+  .menu {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu img {
+    height: 380px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu_list {
+    justify-content: center;
+    margin-right: 193px;
+    margin-left: 193px;
+    border-radius: 50px 50px 0px 0px;
+    z-index: 2;
+    margin-top: -50px;
+  }
+  .menu_list_title {
+    justify-content: center;
+    gap: 24px;
+  }
+  .menu_entree {
+    padding: 0px 210px 0px;
+  }
+}
 .location {
   display: flex;
   justify-content: center;
@@ -173,11 +216,22 @@ a {
     font-size: 40px;
   }
 }
-.button_content {
+.btn_content {
   display: flex;
   justify-content: center;
+  padding-bottom: 40px;
 }
-.button_content .button_menu {
+.btn_content_menu {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  width: 186px;
+  height: 50px;
+  border: none;
+  color: white;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.button_menu {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   width: 218px;
@@ -186,14 +240,44 @@ a {
   color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-.button_content .button_text {
+
+.button_text {
   font-size: 16px;
 }
 
+.card_new {
+  position: absolute;
+  top: 13px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #99E2D0;
+  width: 80px;
+  height: 29px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.card_new_text {
+  color: #008766;
+  font-size: 14px;
+}
+
 @media only screen and (min-width: 1440px) {
-  .button_content .button_menu {
-    width: 271px;
-    height: 41px;
+  .btn_content {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+  }
+  .btn_menu {
+    background: linear-gradient(#FF79DA, #9356DC);
+    border-radius: 25px;
+    width: 186px;
+    height: 50px;
+    border: none;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
 }
 .functioning {
@@ -274,7 +358,7 @@ a {
 .restaurant_list_card {
   display: flex;
   justify-content: flex-end;
-  padding: 10px;
+  padding: 10px 20px;
 }
 .restaurant_list_title {
   font-size: 24px;
@@ -293,6 +377,7 @@ a {
 }
 .restaurant_list_content {
   background-color: white;
+  position: relative;
   border-radius: 15px;
 }
 .restaurant_list_content img {
@@ -345,6 +430,7 @@ a {
 .footer {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background-color: #353535;
   padding: 20px 25px;
   gap: 16px;
@@ -368,13 +454,14 @@ a {
   gap: 11px;
 }
 .footer_list_item i {
-  width: 11.918px;
+  width: 12px;
   height: 13px;
 }
 
 @media only screen and (min-width: 1440px) {
   .footer {
-    padding: 30px 25px;
+    padding: 50px 54px 20px 0px;
+    width: 100%;
   }
   .footer_container {
     display: flex;
