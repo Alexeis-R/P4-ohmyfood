@@ -1,25 +1,66 @@
-.button_content {
+.btn_content {
     display: flex;
     justify-content: center;
-    & .button_menu {
+    padding-bottom: 40px;
+    &_menu {
         background: linear-gradient(#FF79DA,#9356DC);
         border-radius: 25px;
-        width: 218px;
+        width: 186px;
         height: 50px;
         border: none;
         color: white;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-        
     }
-    & .button_text {
-        font-size: 16px;
-    }
-
+}
+.button_menu {
+    background: linear-gradient(#FF79DA,#9356DC);
+    border-radius: 25px;
+    width: 218px;
+    height: 50px;
+    border: none;
+    color: white;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.button_text {
+    font-size: 16px;
 }
 
-@media only screen and (min-width : 1440px){
-    .button_content .button_menu {
-        width: 271px;
-        height: 41px;
+.card_new {
+    position:absolute;
+    top: 13px;
+    right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $tertiary-color;
+    width: 80px;
+    height: 29px;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    &_text {
+        color: #008766;
+        font-size: 14px;
+    }
+}
+
+
+
+
+@media only screen and (min-width : 1440px) {
+    .btn_content {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+        
+    }
+    .btn_menu {
+        background: linear-gradient(#FF79DA,#9356DC);
+        border-radius: 25px;
+        width: 186px;
+        height: 50px;
+        border: none;
+        color: white;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     }
 }
