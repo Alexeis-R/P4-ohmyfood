@@ -1,6 +1,7 @@
 .footer {
     display: flex;
     flex-direction: column;
+    width: 100%;
     background-color: $footer-background;
     padding: 20px 25px;
     gap: 16px;
@@ -21,7 +22,7 @@
             align-items: center;
             gap: 11px;
             & i {
-                width: 11.918px;
+                width: 12px;
                 height: 13px;
             }
         }
@@ -31,7 +32,9 @@
 
 @media only screen and (min-width : 1440px) {
     .footer {
-        padding: 30px 25px;
+        // padding: 30px 25px;
+        padding: 50px 54px 20px 0px;
+        width: 100%;
 
         &_container {
             display: flex;
@@ -47,8 +50,4 @@
             margin: 0px;
         }
     }
-    
-
-    
-
 }
