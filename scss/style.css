@@ -13,7 +13,8 @@ li {
 
 h1,
 h3,
-h4 {
+h4,
+p {
   margin: 0px;
 }
 
@@ -24,6 +25,13 @@ li p {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+p,
+h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header {
@@ -95,11 +103,26 @@ a {
   font-weight: 400;
   font-style: normal;
 }
-.menu_list_title i {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  padding-right: 24px;
+.menu .heart {
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+}
+.menu .heart .fa-solid {
+  margin-right: -24px;
+  font-size: 23px;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  opacity: 0;
+  transition: 400ms;
+}
+.menu .heart:hover .fa-solid {
+  opacity: 1;
+}
+.menu .heart:hover .fa-regular {
+  opacity: 0;
 }
 .menu_entree {
   display: flex;
@@ -122,8 +145,8 @@ a {
   width: 100%;
 }
 .menu_entree_buttons_button {
-  width: 100%;
-  padding: 15px;
+  display: flex;
+  justify-content: space-between;
   border: none;
   border-radius: 15px;
   background-color: white;
@@ -131,26 +154,50 @@ a {
 }
 .menu_entree_buttons_title {
   display: flex;
+  flex-direction: column;
+  padding: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu_entree_buttons_title h4 {
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu_entree_buttons_price {
-  display: flex;
-  justify-content: space-between;
+.menu_entree_buttons_title p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu_entree_buttons_price span {
-  font-size: 15.043px;
-  font-weight: 700;
-  font-style: normal;
-}
-.menu_entree_buttons_price p {
-  margin: 0px;
+.menu_entree_buttons span {
   font-size: 15px;
-  font-weight: 300;
-  font-style: normal;
+  font-weight: 700;
+  display: flex;
+  align-items: end;
+  padding-bottom: 15px;
+  margin-left: auto;
+}
+.menu_entree_buttons .fa-check {
+  width: 59px;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+}
+.menu_entree_buttons .fa-check::before {
+  background-color: white;
+  border-radius: 15px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #99E2D0;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -202,6 +249,7 @@ a {
   text-align: center;
   padding: 20px 20px 50px 20px;
   background-color: #F6F6F6;
+  gap: 12px;
 }
 .info_title {
   margin: 0px;
@@ -229,6 +277,10 @@ a {
   border: none;
   color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.btn_content_menu:hover {
+  filter: brightness(110%);
 }
 
 .button_menu {
@@ -239,6 +291,10 @@ a {
   border: none;
   color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+.button_menu:hover {
+  filter: brightness(110%);
 }
 
 .button_text {
@@ -278,6 +334,10 @@ a {
     border: none;
     color: white;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+  }
+  .btn_menu:hover {
+    filter: brightness(110%);
   }
 }
 .functioning {
@@ -403,12 +463,13 @@ a {
   font-size: 17px;
   font-style: normal;
 }
-.restaurant_list_content_like {
+
+.heart {
   font-size: 21px;
   display: flex;
   align-items: center;
 }
-.restaurant_list_content_like .fa-solid {
+.heart .fa-solid {
   margin-right: -24px;
   font-size: 23px;
   color: transparent;
@@ -418,10 +479,10 @@ a {
   opacity: 0;
   transition: 400ms;
 }
-.restaurant_list_content_like:hover .fa-solid {
+.heart:hover .fa-solid {
   opacity: 1;
 }
-.restaurant_list_content_like:hover .fa-regular {
+.heart:hover .fa-regular {
   opacity: 0;
 }
 
