@@ -15,7 +15,8 @@ li {
 }
 h1, 
 h3, 
-h4 {
+h4,
+p {
     margin: 0px;
 }
 li p  {
@@ -25,4 +26,11 @@ li p  {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+p,
+h4 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
