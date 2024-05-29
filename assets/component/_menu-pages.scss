@@ -27,12 +27,27 @@
                 font-weight: 400;
                 font-style: normal;
             }
-            & i {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 28px;
-                padding-right: 24px;
-            }
+        }
+    }
+    .heart {
+        // border: 3px solid green;
+        font-size: 21px;
+        display: flex;
+        align-items: center;
+        .fa-solid {
+            margin-right: -24px;
+            font-size: 23px;
+            color: transparent;
+            background-image: linear-gradient($primary-color, $secondary-color);
+            background-clip: text;
+            opacity: 0;
+            transition: 400ms;
+        }
+        &:hover .fa-solid {
+            opacity: 1;
+        }
+         &:hover .fa-regular {
+            opacity: 0;
         }
     }
     &_entree {
@@ -55,8 +70,8 @@
             gap: 12px;
             width: 100%;
             &_button {
-                width: 100%;
-                padding: 15px;
+                display: flex;
+                justify-content: space-between;
                 border: none;
                 border-radius: 15px;
                 background-color: white;
@@ -64,28 +79,53 @@
             }
             &_title {
                 display: flex;
+                flex-direction: column;
+                padding: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 h4 {
                     font-size: 18px;
                     font-weight: 500;
                     font-style: normal;
-                }
-            }
-            &_price {
-                display: flex;
-                justify-content: space-between;
-                span {
-                    font-size: 15.043px;
-                    font-weight: 700;
-                    font-style: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
                 p {
-                    margin: 0px;
-                    font-size: 15px;
-                    font-weight: 300;
-                    font-style: normal;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
-            
+            & span {
+                font-size: 15px;
+                font-weight: 700;
+                display: flex;
+                align-items: end;
+                padding-bottom: 15px;
+                margin-left: auto;
+            }
+            .fa-check {
+                width: 59px;
+                background-color: #99E2D0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px 15px 15px 0px;
+                
+            }
+            .fa-check::before{
+                background-color: white;
+                border-radius: 15px;
+                width: 22px;
+                height: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #99E2D0;
+
+            }
         }
     }
 
