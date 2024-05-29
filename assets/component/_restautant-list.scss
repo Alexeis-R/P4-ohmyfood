@@ -60,29 +60,30 @@
             font-size: 17px;
             font-style: normal;
         }
-        &_like {
-            // border: 3px solid green;
-            font-size: 21px;
-            display: flex;
-            align-items: center;
-            .fa-solid {
-                margin-right: -24px;
-                font-size: 23px;
-                color: transparent;
-                background-image: linear-gradient($primary-color, $secondary-color);
-                background-clip: text;
-                opacity: 0;
-                transition: 400ms;
-            }
-            &:hover .fa-solid {
-                opacity: 1;
-            }
-             &:hover .fa-regular {
-                opacity: 0;
-            }
-        }
+        
     }
 
+}
+.heart {
+    // border: 3px solid green;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    .fa-solid {
+        margin-right: -24px;
+        font-size: 23px;
+        color: transparent;
+        background-image: linear-gradient($primary-color, $secondary-color);
+        background-clip: text;
+        opacity: 0;
+        transition: 400ms;
+    }
+    &:hover .fa-solid {
+        opacity: 1;
+    }
+     &:hover .fa-regular {
+        opacity: 0;
+    }
 }
 ////**** Media Query ****///
 
