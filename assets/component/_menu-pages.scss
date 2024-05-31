@@ -113,7 +113,8 @@
                 align-items: center;
                 justify-content: center;
                 border-radius: 0px 15px 15px 0px;
-                
+                // animation: slide 2s;
+                // animation-fill-mode: forwards;
             }
             .fa-check::before{
                 background-color: white;
@@ -125,6 +126,18 @@
                 justify-content: center;
                 color: #99E2D0;
 
+            }
+            @keyframes slide {
+                0% {
+                    translate: 0px;
+                }
+                100%{
+                    translate: 60px;
+                }
+            }
+            .fa-check:active {
+                animation: slide 2s;
+                animation-fill-mode: forwards;
             }
         }
     }
