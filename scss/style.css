@@ -138,6 +138,26 @@ h4 {
 .menu_entree h3 {
   margin: 0px;
 }
+@keyframes slide_left {
+  0% {
+    transform: translateZ(60px);
+    width: 0;
+  }
+  100% {
+    transform: translateZ(0px);
+    width: 59px;
+  }
+}
+@keyframes slide_right {
+  0% {
+    transform: translateZ(0px);
+    width: 59px;
+  }
+  100% {
+    transform: translateZ(60px);
+    width: 0px;
+  }
+}
 .menu_entree_buttons {
   display: flex;
   flex-direction: column;
@@ -151,6 +171,24 @@ h4 {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+}
+.menu_entree_buttons_button .checkbox {
+  animation: slide_right 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.menu_entree_buttons_button .fa-check {
+  display: none;
+  animation: 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.menu_entree_buttons_button:hover .checkbox {
+  animation: slide_left 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.menu_entree_buttons_button:hover .fa-check {
+  display: block;
+  animation: 0.5s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .menu_entree_buttons_title {
   display: flex;
@@ -182,12 +220,7 @@ h4 {
   margin-left: auto;
 }
 .menu_entree_buttons .fa-check {
-  width: 59px;
-  background-color: #99E2D0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0px 15px 15px 0px;
+  display: none;
 }
 .menu_entree_buttons .fa-check::before {
   background-color: white;
@@ -199,17 +232,13 @@ h4 {
   justify-content: center;
   color: #99E2D0;
 }
-@keyframes slide {
-  0% {
-    translate: 60px;
-  }
-  100% {
-    translate: 0px;
-  }
-}
-.menu_entree_buttons .fa-check:active {
-  animation: slide 2s;
-  animation-fill-mode: forwards;
+.menu_entree_buttons .checkbox {
+  width: 0;
+  background-color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
 }
 
 @media only screen and (min-width: 1440px) {

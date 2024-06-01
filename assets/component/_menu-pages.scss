@@ -64,6 +64,27 @@
         & h3 {
             margin: 0px;
         }
+        @keyframes slide_left {
+            0% {
+                transform:translateZ(60px);
+                width: 0;
+            }
+            100%{
+                transform:translateZ(0px);
+                width: 59px;
+            }
+        }
+        @keyframes slide_right {
+            0% {
+                transform:translateZ(0px);
+                width: 59px;
+            }
+            100%{
+                transform:translateZ(60px);
+                width: 0px
+            }
+            
+        }
         &_buttons {
             display: flex;
             flex-direction: column;
@@ -76,7 +97,28 @@
                 border-radius: 15px;
                 background-color: white;
                 box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+                .checkbox {
+                    animation: slide_right 0.5s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+                .fa-check {
+                    display: none;
+                    animation: 0.5s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+                &:hover {
+                    .checkbox {
+                        animation: slide_left 0.5s ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                    .fa-check {
+                        display: block;
+                        animation: 0.5s ease-in-out;
+                        animation-fill-mode: forwards;
+                    }
+                }
             }
+            
             &_title {
                 display: flex;
                 flex-direction: column;
@@ -107,14 +149,7 @@
                 margin-left: auto;
             }
             .fa-check {
-                width: 59px;
-                background-color: #99E2D0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 0px 15px 15px 0px;
-                // animation: slide 2s;
-                // animation-fill-mode: forwards;
+                display: none;
             }
             .fa-check::before{
                 background-color: white;
@@ -127,18 +162,15 @@
                 color: #99E2D0;
 
             }
-            @keyframes slide {
-                0% {
-                    translate: 0px;
-                }
-                100%{
-                    translate: 60px;
-                }
+            .checkbox {
+                width:0;
+                background-color: #99E2D0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0px 15px 15px 0px;
             }
-            .fa-check:active {
-                animation: slide 2s;
-                animation-fill-mode: forwards;
-            }
+            
         }
     }
 
