@@ -34,6 +34,30 @@ h4 {
   text-overflow: ellipsis;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  animation: disappear 2s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  background-color: #F6F6F6;
+  inset: 0;
+  opacity: 0.9;
+  z-index: 1;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-top: 5px solid #9356DC;
+  border-right: 5px solid #FF79DA;
+  border-left: 5px solid #99E2D0;
+  border-bottom: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 5s infinite linear;
+}
+
 .header {
   display: flex;
   justify-content: center;
@@ -87,7 +111,6 @@ h4 {
   border-radius: 50px 50px 0px 0px;
   gap: 40px;
   background-color: #F6F6F6;
-  z-index: 2;
   margin-top: -50px;
 }
 .menu_list_title {
@@ -207,6 +230,23 @@ h4 {
   transition: 0.3s ease-in-out;
 }
 
+.appear_1 {
+  animation: appear 5s;
+  animation-fill-mode: backwards;
+}
+
+.appear_2 {
+  animation: appear 5s;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
+.appear_3 {
+  animation: appear 5s;
+  animation-fill-mode: backwards;
+  animation-delay: 2s;
+}
+
 @media only screen and (min-width: 1440px) {
   .menu {
     width: auto;
@@ -223,7 +263,6 @@ h4 {
     margin-right: 193px;
     margin-left: 193px;
     border-radius: 50px 50px 0px 0px;
-    z-index: 2;
     margin-top: -50px;
   }
   .menu_list_title {
@@ -232,6 +271,32 @@ h4 {
   }
   .menu_entree {
     padding: 0px 210px 0px;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 0;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+  }
+}
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
   }
 }
 .location {
