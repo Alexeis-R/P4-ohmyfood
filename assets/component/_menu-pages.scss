@@ -21,7 +21,7 @@
             padding: 32px 17px 0px;
             & h3 {
                 margin: 0px;
-                font-family: "Shrikhand";
+                font-family: $secondary-font;
                 font-size: 28px;
                 font-weight: 400;
                 font-style: normal;
@@ -29,7 +29,6 @@
         }
     }
     .heart {
-        // border: 3px solid green;
         font-size: 21px;
         display: flex;
         align-items: center;
@@ -50,7 +49,6 @@
         }
     }
     &_entree {
-        // border: 2px solid blue;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
@@ -63,6 +61,9 @@
         }
         & h3 {
             margin: 0px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 300;
         }
         
         &_buttons {
@@ -76,8 +77,8 @@
                 justify-content: space-between;
                 border: none;
                 border-radius: 15px;
-                background-color: white;
-                box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+                background-color: $text_color;
+                box-shadow: 0px 4.011px 15px 0px rgba(0, 0, 0, 0.10);
                 overflow: hidden;
 
                 &:hover {
@@ -117,18 +118,18 @@
                 margin-left: auto;
             }
             .fa-check {
-                background-color: white;
+                background-color: $text_color;
                 border-radius: 15px;
                 width: 22px;
                 height: 22px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: #99E2D0;
+                color: $tertiary-color;
 
             }
             .checkbox {
-                background-color: #99E2D0;
+                background-color: $tertiary-color;
                 display: flex;
                 align-items: center;
                 justify-content: center;

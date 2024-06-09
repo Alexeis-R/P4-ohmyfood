@@ -1,22 +1,18 @@
 .restaurant_list {
-    // border: 3px solid indigo;
     display: flex;
     flex-direction: column;
     background-color: $location-color;
     padding: 20px;
     &_card {
-        // border: 3px solid black;
         display: flex;
         justify-content:flex-end;
         padding: 10px 20px;
 
     }
     &_title {
-        // border: 3px solid green;
         font-size: 24px;
     }
     &_card_container {
-        // border: 3px solid red;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
@@ -29,10 +25,9 @@
         }
     }
     &_content{
-        background-color: white;
+        background-color: $text_color;
         position: relative;
         border-radius: 15px;
-        // border: 3px solid salmon;
         & img {
             width: 100%;
             height: 231px;
@@ -41,7 +36,6 @@
         }
         
         &_text{
-            // border: 3px solid blueviolet;
             display: flex;
             flex-direction: column;
             margin-right: auto;
@@ -52,11 +46,9 @@
             }
         }
         &_title {
-            // border: 3px solid gold;
             font-size: 18px;
         }
         &_city {
-            // border: 3px solid red;
             font-size: 17px;
             font-style: normal;
         }
@@ -65,7 +57,6 @@
 
 }
 .heart {
-    // border: 3px solid green;
     font-size: 21px;
     display: flex;
     align-items: center;
@@ -89,12 +80,10 @@
 
 @media only screen and (min-width : 1440px) {
     .restaurant_list {
-        // border: 2px solid gold;
         padding: 0px 180px 30px 180px;
         gap: 28px;
         align-items: flex-start;
         &_card_container {
-            // border: 3px solid black;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
