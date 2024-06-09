@@ -1,32 +1,40 @@
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 0px;
-    padding: 14px 89px 13px 89px;
     &_logo {
         font-family: $secondary-font;
-        padding: 0px 19px 0px 16px;
+        padding: 14px 89px 13px 89px;
         margin: 0px;
     }
 }
 ///*** Header Menu ***///
 .header_menu {
     display: flex;
-    // border: 2px solid red;
     box-sizing: border-box;
     width: 100%;
 }
 .header_container {
-    // border: 2px solid green;
-    display: flex;
     padding: 14px 89px 13px 17px;
-    align-items: center;
     gap: 42px;
+    display: flex;
+    align-items: center;
     width: 100%;
     & h1 {
+        padding: 0px;
         font-size: 30px;
         font-weight: 400;
         line-height: normal;
+    }
+    & a {
+        padding: 10px;
+    }
+    &_header_logo{
+        padding: 0;
+    }
+    & i {
+        font-size: 24px;
     }
 }
 
