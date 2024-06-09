@@ -3,13 +3,13 @@
     justify-content: center;
     padding-bottom: 40px;
     &_menu {
-        background: linear-gradient(#FF79DA,#9356DC);
+        @include linearGradient;
+        @include shadow;
         border-radius: 25px;
         width: 186px;
         height: 50px;
         border: none;
-        color: white;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        color: $text_color;
         transition: all 0.3s ease;
         &:hover{
             filter : brightness(110%);
@@ -17,13 +17,13 @@
     }
 }
 .button_menu {
-    background: linear-gradient(#FF79DA,#9356DC);
+    @include linearGradient;
+    @include shadow;
     border-radius: 25px;
     width: 218px;
     height: 50px;
     border: none;
-    color: white;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    color: $text_color;
     transition: all 0.3s ease;
     &:hover{
     filter : brightness(110%);
@@ -35,21 +35,21 @@
 }
 
 .card_new {
+    @include shadow;
     position:absolute;
     top: 13px;
     right: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
     background-color: $tertiary-color;
     width: 80px;
     height: 29px;
-    text-align: center;
     border-radius: 2px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     &_text {
-        color: #008766;
         font-size: 14px;
+        color: $text-new;
     }
 }
 
@@ -64,13 +64,13 @@
         
     }
     .btn_menu {
-        background: linear-gradient(#FF79DA,#9356DC);
+        @include linearGradient;
+        @include shadow;
         border-radius: 25px;
         width: 186px;
         height: 50px;
         border: none;
-        color: white;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        color: $text_color;
         transition: all 0.3s ease;
         &:hover{
             filter : brightness(110%);
