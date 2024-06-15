@@ -1,3 +1,4 @@
+
 .restaurant_list {
     display: flex;
     flex-direction: column;
@@ -79,10 +80,15 @@
 ////**** Media Query ****///
 
 @media only screen and (min-width : 1440px) {
+    .restaurant_container {
+        background-color: $location-color;
+    }
     .restaurant_list {
         padding: 0px 180px 30px 180px;
         gap: 28px;
         align-items: flex-start;
+        max-width: 1440px;
+        margin: auto;
         &_card_container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);

@@ -35,9 +35,25 @@
     }
     
 }
+@media only screen and (min-width : 768px){
+    .footer {
+        display: flex;
+        flex-direction: row;
+        &_list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px
+           }
+    }
+    
+}
 
 @media only screen and (min-width : 1440px) {
     .footer {
+        display: flex;
+        flex-direction: column-reverse;
         padding: 50px 54px 20px 0px;
         width: 100%;
 
