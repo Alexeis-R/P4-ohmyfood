@@ -4,7 +4,7 @@
     flex-direction: column;
     & img {
         width: 100%;
-        height: 275px;
+        height: 380px;
         object-fit: cover;
     }
     &_list {
@@ -17,7 +17,8 @@
         &_title {
             display: flex;
             align-items: baseline;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 24px;
             padding: 32px 17px 0px;
             & h3 {
                 margin: 0px;
@@ -158,7 +159,22 @@
     animation-delay: 2s;
 }
 
+
+
+@media only screen and (min-width : 768px) {
+    .menu_container {
+        margin-right: 150px;
+        margin-left: 150px;
+    }
+}
+
+
+
 @media only screen and (min-width : 1440px) {
+    .menu_container {
+        margin-right: 194px;
+        margin-left: 194px;
+    }
     .menu {
         width:auto;
         display: flex;
@@ -168,9 +184,9 @@
             object-fit: cover;
         }
         &_list {
-            justify-content: center;
-            margin-right: 193px;
-            margin-left: 193px;
+            // margin-right: 193px;
+            // margin-left: 193px;
+            max-width: 1055px;
             border-radius: 50px 50px 0px 0px;
             margin-top: -50px;
             &_title {
@@ -184,7 +200,6 @@
     }
 
 }
-
 
 
 
