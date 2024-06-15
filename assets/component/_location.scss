@@ -4,14 +4,26 @@
     gap: 17px;
     background-color: $location-color;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    align-items: center;
     & i {
         display: flex;
         align-items: center;
         font-size: 16px;
+        margin-left: 67px;
     }
     &_text {
         font-weight: 500;
         font-size: 16px;
     }
+}
+input {
+    border: none;
+    background-color: $location-color;
+    width: auto;
+    font-size: 16px;
+    color: $footer-background;
+    font-weight: 500;
+
 }
 
