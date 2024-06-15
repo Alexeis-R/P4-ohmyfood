@@ -61,7 +61,10 @@
         display: flex;
         justify-content: center;
         padding-bottom: 40px;
-        
+        &_menu:hover {
+         @include box-shadow-button;
+
+        }
     }
     .btn_menu {
         @include linearGradient;
@@ -74,6 +77,13 @@
         transition: all 0.3s ease;
         &:hover{
             filter : brightness(110%);
-            }
+            @include box-shadow-button;
+
+        }
     }
+    .button_menu:hover {
+        @include box-shadow-button;
+
+    }
+
 }
