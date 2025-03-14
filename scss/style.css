@@ -297,7 +297,6 @@ h4 {
        object-fit: cover;
   }
   .menu_list {
-    max-width: 1055px;
     border-radius: 50px 50px 0px 0px;
     margin-top: -50px;
   }
